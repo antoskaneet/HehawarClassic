@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c021kxjvvk85j"]
+
+[ext_resource type="Texture2D" uid="uid://bylbr6guhvn8e" path="res://assets/testhexunit.png" id="1_qpjjl"]
+[ext_resource type="Script" uid="uid://dfrt61ynurn5u" path="res://scripts/hex_units/HexUnitInput.gd" id="2_8t161"]
+[ext_resource type="Script" uid="uid://ct8ep1e656lvq" path="res://scripts/hex_units/HexUnitMovement.gd" id="3_8t161"]
+
+[node name="HexUnit" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qpjjl")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" node_paths=PackedStringArray("movement_script")]
+script = ExtResource("2_8t161")
+movement_script = NodePath("../../HexUnitMovement")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D"]
+polygon = PackedVector2Array(64, 122, 126, -1, 63, -124, -63, -124, -125, 1, -61, 124)
+
+[node name="HexUnitMovement" type="Node" parent="."]
+script = ExtResource("3_8t161")
+
+[connection signal="input_event" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_input_event"]

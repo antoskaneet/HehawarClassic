@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=4 uid="uid://b8lwk13tok2lh"]
+
+[ext_resource type="TileSet" uid="uid://cd1j3qkll515g" path="res://assets/tileset/test_level.tres" id="1_67e3x"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAQD///7/AAAAAAAAAQAAAP7/AAAAAAAAAQABAP7/AAAAAAAAAQACAP7/AAAAAAAAAQADAP7/AAAAAAAAAQACAP//AAAAAAAAAQABAP//AAAAAAAAAQAAAP//AAAAAAAAAQD/////AAAAAAAAAQD+////AAAAAAAAAQD///3/AAAAAAAAAQAAAP3/AAAAAAAAAQABAP3/AAAAAAAAAQACAP3/AAAAAAAAAQADAP3/AAAAAAAAAQACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQADAP//AAAAAAAAAQA=")
+tile_set = ExtResource("1_67e3x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(367, -303)
+zoom = Vector2(0.4, 0.4)
