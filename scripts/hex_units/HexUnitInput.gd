@@ -3,7 +3,7 @@ extends Area2D
 @export var movement_script: Node
 
 static var rec_tilemaplayer
-var radius = 2
+var radius = 1
 
 static func set_tilemaplayer(tilemaplayer):
 	rec_tilemaplayer = tilemaplayer

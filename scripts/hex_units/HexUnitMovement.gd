@@ -1,6 +1,6 @@
 extends Node
 
-static func get_hexes_in_radius(hex_coord: Vector2, radius: int, tilemap_layer: TileMapLayer) -> Array:
+func get_hexes_in_radius(hex_coord: Vector2, radius: int, tilemap_layer: TileMapLayer) -> Array:
 	var result = []
 	var q0 = int(hex_coord.x)
 	var r0 = int(hex_coord.y)

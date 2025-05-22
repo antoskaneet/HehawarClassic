@@ -1,10 +1,12 @@
 extends Node
 
-var HexUnitController = preload("res://scripts/hex_units/HexUnitController.gd")
-var test_level_scene = preload("res://scenes/level/test_level.tscn")
+var Initilaizer = preload("res://core/Initializer.gd")
+var initilaizer_instance = Initilaizer.new()
 
-var test_level_instance = test_level_scene.instantiate()
+var tree
 
 func _ready():
-	HexUnitController.init()
-	add_child(test_level_instance)
+	tree = get_tree()
+	initilaizer_instance.set_tree(tree)
+	initilaizer_instance.init()
+	
